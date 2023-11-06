@@ -1,0 +1,17 @@
+nav.topbar {
+    width: 100%;
+    padding: 10px 0;
+    
+    background: #495e57;
+}
+
+nav.topbar > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+
+    list-style: none;
+}
+

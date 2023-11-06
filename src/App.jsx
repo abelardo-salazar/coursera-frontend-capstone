@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Header } from './components/layout/Header';
-import { Nav } from './components/layout/Nav';
-import { Main } from './components/layout/Main';
-import { Footer } from './components/layout/Footer';
+import { Header } from './components/Layout/Header/Header.jsx';
+import { Nav } from './components/Layout/Nav/Nav.jsx';
+import { Main } from './components/Layout/Main.jsx';
+import  Footer  from './components/Layout/Footer/Footer.jsx';
 
 function App() {
   return (
