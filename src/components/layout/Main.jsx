@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Main = () => {
+export const Main = ({children}) => {
   return (
-    <main>Main</main>
+    <main className='container'>{children}</main>
   )
 }

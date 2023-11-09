@@ -1,11 +1,13 @@
-nav.topbar {
+nav {
     width: 100%;
-    padding: 10px 0;
-    
-    background: #495e57;
+    background: var(--primary-color);
 }
 
-nav.topbar > ul {
+.topbar {
+    padding: 10px 0;
+}
+
+.topbar > ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
