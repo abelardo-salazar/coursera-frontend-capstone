@@ -1,20 +1,20 @@
 import React from 'react';
+import { Route, Routes } from "react-router-dom"
+import { Layout } from './components/Layout/Layout.jsx';
+
 import './App.css';
-import { Header } from './components/Layout/Header/Header.jsx';
-import { Nav } from './components/Layout/Nav/Nav.jsx';
-import { Main } from './components/Layout/Main.jsx';
-import Footer from './components/Layout/Footer/Footer.jsx';
-import Homepage from './components/pages/Homepage/Homepage.jsx';
+import { routes } from './utils/routes.jsx';
 
 function App() {
   return (
     <React.Fragment className="App">
-      <Header />
-      <Nav />
-      <Main>
-        <Homepage />
-      </Main>
-      <Footer />
+      <Layout>
+        <Routes>
+          {routes.map(({ path, component }) => (
+            <Route path={path} element={component} key={path} />
+          ))}
+        </Routes>
+      </Layout>
     </React.Fragment>
   );
 }

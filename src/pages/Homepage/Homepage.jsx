@@ -1,7 +1,7 @@
 import React from 'react'
-import Chicago from '../../Chicago/Chicago'
-import Specials from '../../Specials/Specials'
-import CustomerSay from '../../CustomerSay/CustomerSay'
+import Chicago from '../../components/Chicago/Chicago'
+import Specials from '../../components/Specials/Specials'
+import CustomerSay from '../../components/CustomerSay/CustomerSay'
 
 import "./index.css"
 
@@ -36,7 +36,7 @@ const testimonials = [
         customer: "John Doe"
     }
 ]
-const Homepage = () => {
+export const Homepage = () => {
     return (
         <div>
             <Chicago />
@@ -49,11 +49,9 @@ const Homepage = () => {
             <div className='container-child article-container'>
                 {testimonials.map((testimonial, ind) => (
 
-                <CustomerSay {...testimonial} key={`testimonial-${ind}-${testimonial.customer}`} />
+                    <CustomerSay {...testimonial} key={`testimonial-${ind}-${testimonial.customer}`} />
                 ))}
             </div>
         </div>
     )
 }
-
-export default Homepage

@@ -1,7 +1,8 @@
 import React from 'react'
 import "./index.css"
+import { routes } from '../../../utils/routes'
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer>
             <div className="footer-container container">
@@ -9,12 +10,10 @@ const Footer = () => {
                 <div className='footer-navigation'>
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a className='navlink__white' href="#">Home</a></li>
-                        <li><a className='navlink__white' href="#">About</a></li>
-                        <li><a className='navlink__white' href="#">Menu</a></li>
-                        <li><a className='navlink__white' href="#">Reservations</a></li>
-                        <li><a className='navlink__white' href="#">Order Online</a></li>
-                        <li><a className='navlink__white' href="#">Login</a></li>
+                        {routes.map(({ path, label }) => (
+                            <li key={path}><a className='navlink__white' href={path}>{label}</a></li>
+                        ))}
+
                     </ul>
                 </div>
                 <hr />
@@ -22,21 +21,19 @@ const Footer = () => {
                     <h4>Contact</h4>
                     <ul>
                         <li>Address</li>
-                        <li><a className='navlink__white' href="#">Email</a></li>
-                        <li><a className='navlink__white' href="#">Phone number</a></li>
+                        <li><a className='navlink__white' href="mail:someemail@gmail.com" rel="noopener noreferrer" target="_blank">Email</a></li>
+                        <li><a className='navlink__white' href="tel:00000000" rel="noopener noreferrer" target="_blank">Phone number</a></li>
                     </ul>
                 </div>
                 <hr />
                 <div className='footer-media'>
                     <h4>Social Media</h4>
                     <ul>
-                        <li><a className='navlink__white' href="#">Instagram</a></li>
-                        <li><a className='navlink__white' href="#">Facebook</a></li>
+                        <li><a className='navlink__white' href="www.instagram.com" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+                        <li><a className='navlink__white' href="www.facebook.com" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
             </div>
         </footer>
     )
 }
-
-export default Footer;

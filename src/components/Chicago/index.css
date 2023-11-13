@@ -69,7 +69,7 @@
 
     .hero-content > .hero-img {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         flex: 1;
     }
     
