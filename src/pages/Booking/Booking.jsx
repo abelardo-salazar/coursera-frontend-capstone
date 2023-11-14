@@ -1,7 +1,8 @@
 import React from 'react'
+import { BookingForm } from '../../components/BookingForm/BookingForm'
 
 export const Booking = () => {
   return (
-    <div>Booking</div>
+    <div><BookingForm /></div>
   )
 }
