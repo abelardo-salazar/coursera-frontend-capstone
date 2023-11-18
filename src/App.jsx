@@ -7,7 +7,7 @@ import { routes } from './utils/routes.jsx';
 
 function App() {
   return (
-    <React.Fragment className="App">
+    <div className="App">
       <Layout>
         <Routes>
           {routes.map(({ path, component }) => (
@@ -15,7 +15,7 @@ function App() {
           ))}
         </Routes>
       </Layout>
-    </React.Fragment>
+    </div>
   );
 }
 

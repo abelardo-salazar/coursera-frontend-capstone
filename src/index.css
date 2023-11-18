@@ -3,7 +3,8 @@
   --primary-color--700: #364641;
   --secondary-color: #F4CE14;
   --text-color--white: #FEFEFE;
-  --text-color-dark: #111
+  --text-color-dark: #111;
+  --danger: #FF0000;
 }
 
 body {
@@ -52,11 +53,6 @@ a {
   cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .App {
   display: flex;
   flex-direction: column;
@@ -80,6 +76,8 @@ code {
   color: black;
   font-weight: bold;
   font-size: 1.25rem;
+
+  cursor: pointer;
 }
 
 .container {
@@ -98,7 +96,6 @@ code {
   padding-right: 10%;
 }
 
-
 .article-container {
   display: block;
   flex-wrap: unset;
@@ -110,7 +107,54 @@ code {
   width: 100%;
 }
 
+.field-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  text-align: left;
+}
 
+form {
+  display: grid;
+  margin: 20px 15px;
+  gap: 15px
+}
+
+.field-container>* {
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+
+input,
+select {
+  padding: 2.5px 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  
+  font-size: 1.25rem;
+  color: black;
+}
+
+input.error,
+select.error {
+  border-color: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+}
+
+select.error {
+  color: black;
+}
 
 @media screen and (min-width: 640px) {
   .full-width {
