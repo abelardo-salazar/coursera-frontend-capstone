@@ -18,7 +18,7 @@ export const BookingForm = ({ errors, availableTimes, handleChange }) => {
                     name="res-name"
                     className='error'
                     component="p"
-                    data-testid="nameError" 
+                    data-testid="nameError"
                 />
             </div>
             <div className="field-container">
@@ -27,22 +27,22 @@ export const BookingForm = ({ errors, availableTimes, handleChange }) => {
                     type="date"
                     id="res-date"
                     name="res-date"
-                    data-testid="dateField" 
+                    data-testid="dateField"
                     className={errors['res-date'] && "error"}
                 />
-                <ErrorMessage 
-                    name="res-date" 
-                    className='error' 
-                    component="p" 
-                    data-testid="dateError" 
+                <ErrorMessage
+                    name="res-date"
+                    className='error'
+                    component="p"
+                    data-testid="dateError"
                 />
             </div>
             <div className="field-container">
                 <label htmlFor="res-time">Choose time</label>
-                <Field 
-                    as="select" 
-                    id="res-time" 
-                    name="res-time" 
+                <Field
+                    as="select"
+                    id="res-time"
+                    name="res-time"
                     data-testid="timeField"
                     className={errors['res-time'] && "error"}
                 >
@@ -50,38 +50,38 @@ export const BookingForm = ({ errors, availableTimes, handleChange }) => {
                         <option value={option} key={option}>{option}</option>
                     ))}
                 </Field>
-                <ErrorMessage 
-                    name="res-time" 
-                    className='error' 
-                    component="p" 
+                <ErrorMessage
+                    name="res-time"
+                    className='error'
+                    component="p"
                     data-testid="timeError"
                 />
             </div>
             <div className="field-container">
                 <label htmlFor="guests">Number of guests</label>
-                <Field 
-                    type="number" 
-                    placeholder="1" 
-                    min="1" 
-                    max="10" 
-                    id="guests" 
-                    name="guests" 
-                    data-testid="guestsField" 
-                    className={errors['guests'] && "error"} 
+                <Field
+                    type="number"
+                    placeholder="1"
+                    min="1"
+                    max="10"
+                    id="guests"
+                    name="guests"
+                    data-testid="guestsField"
+                    className={errors['guests'] && "error"}
                 />
-                <ErrorMessage 
-                    name="guests" 
-                    className='error' 
-                    component="p" 
-                    data-testid="guestsError" 
+                <ErrorMessage
+                    name="guests"
+                    className='error'
+                    component="p"
+                    data-testid="guestsError"
                 />
             </div>
             <div className="field-container">
                 <label htmlFor="occasion">Occasion</label>
-                <Field 
-                    as="select" 
-                    id="occasion" 
-                    name="occasion" 
+                <Field
+                    as="select"
+                    id="occasion"
+                    name="occasion"
                     data-testid="occasionField"
                     className={errors['occasion'] && "error"}
                 >
@@ -89,19 +89,20 @@ export const BookingForm = ({ errors, availableTimes, handleChange }) => {
                         <option value={option} key={option}>{option}</option>
                     ))}
                 </Field>
-                <ErrorMessage 
-                    name="occasion" 
-                    className='error' 
-                    component="p" 
+                <ErrorMessage
+                    name="occasion"
+                    className='error'
+                    component="p"
                     data-testid="occasionError"
                 />
             </div>
-            <input 
-                type="submit" 
-                value="Make your reservation" 
-                className='cta-btn' 
-                data-testid="submitButton" 
-                style={{ marginLeft: "auto", marginRight: "auto" }} 
+            <input
+                type="submit"
+                value="Make your reservation"
+                className='cta-btn'
+                data-testid="submitButton"
+                aria-label="On Click"
+                style={{ marginLeft: "auto", marginRight: "auto" }}
             />
         </Form>
     )
