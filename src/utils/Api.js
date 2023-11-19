@@ -18,6 +18,6 @@ const seededRandom = (seed) => {
     return result;
   };
   
-  const submitAPI = (formData) => true;
+  const submitAPI = (formData) => console.log(formData);
   
   export { fetchAPI, submitAPI };

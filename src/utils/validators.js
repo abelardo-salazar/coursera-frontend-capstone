@@ -1,5 +1,6 @@
 export const validators = {
     required: "Field required",
+    invalidDate: "Invalid date",
     email: "You must provide a valid email address",
     afterNow: "You can't book a table in the past",
     option: "You must select a valid option",

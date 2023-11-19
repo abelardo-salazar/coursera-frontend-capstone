@@ -8,7 +8,7 @@ import { validators } from "../../utils/validators"
 
 import "./index.css"
 import { occasionOptions } from '../../utils/fieldsOptions'
-import { fetchAPI } from '../../utils/Api'
+import { fetchAPI, submitAPI } from '../../utils/Api'
 
 export const Booking = () => {
   const updateTimes = (availableTimes, date) => {
@@ -33,8 +33,10 @@ export const Booking = () => {
         .required(validators.required),
     "res-date":
       date()
-        .default(new Date().toISOString().slice(0, 10))
+        .nullable()
+        .typeError(validators.invalidDate)
         .required(validators.required)
+        .default(new Date().toISOString().slice(0, 10))
         .min(new Date().toISOString().slice(0, 10), validators.afterNow),
     "res-time":
       string()
@@ -62,14 +64,14 @@ export const Booking = () => {
     occasion: occasionOptions[0]
   }
   return (
-    <div>
+    <div data-testid="bookingComponent">
       <h2 className='title'>Book your table</h2>
       <p>Please fill the following form</p>
       <Formik
         initialValues={bookingFormInitialValues}
         validationSchema={bookingFormSchema}
         onSubmit={(values) => {
-          console.log(values)
+          submitAPI(values)
         }}
       >
         {(formik) => {
